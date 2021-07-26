@@ -1,0 +1,21 @@
+variables:
+- group: 'PipelinesGlobalVariables'
+
+trigger:
+- dev
+
+pr: none
+
+resources: 
+  repositories: 
+  - repository: MSA-Pipelines 
+    name: 'Autogrill/MSA-Pipelines'
+    type: github
+    ref: main
+    endpoint: github.com_rocco-kp
+
+pool:
+  vmImage: 'ubuntu-latest'
+
+steps:
+- template: springboot-maven.yml@MSA-Pipelines
