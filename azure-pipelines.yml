@@ -5,8 +5,9 @@ trigger: none
 
 pr:
   branches:
-    include:
-    - dev
+    include: "dev"
+  path:
+    include: "*"
   drafts: false
 
 resources: 
