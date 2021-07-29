@@ -1,9 +1,13 @@
 variables:
 - group: 'PipelinesGlobalVariables'
 
-pr: 
-- dev
-drafts: false
+trigger: none
+
+pr:
+  branches:
+    include:
+    - dev
+  drafts: false
 
 resources: 
   repositories: 
