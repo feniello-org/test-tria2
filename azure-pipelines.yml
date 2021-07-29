@@ -7,9 +7,6 @@ pr:
   branches:
     include: 
     - dev
-  paths:
-    include:
-    - *
   drafts: false
 
 resources: 
